@@ -1,0 +1,20 @@
+curl --location 'http://localhost:8083/api/events/get?start_time=2026-02-13%2006%3A26%3A19&end_time=2026-02-13%2006%3A28%3A19&hik_uid=fa98ff0e28764e7fa210e260ff8ceadf&event_id=7&limit=10&offset=1'
+
+curl -X POST http://localhost:8083/api/vehicle/speed/get/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "hik_camera_index": "144d80bc17a64e23b87b19d9626aeb6a",
+    "start_time": "2026-01-16 10:00:00",
+    "end_time": "2026-01-16 10:30:00"
+  }'
+
+curl -X POST http://localhost:8083/api/count/vehicle/get/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "hik_camera_index": "144d80bc17a64e23b87b19d9626aeb6a",
+    "start_time": "2026-01-16 10:00:00",
+    "end_time": "2026-01-16 10:30:00"
+  }'
+
+curl  http://localhost:8083/api/annotation/vehicle_count/get/144d80bc17a64e23b87b19d9626aeb6a \
+  -H "Content-Type: application/json" \
